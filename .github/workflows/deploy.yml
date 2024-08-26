@@ -26,13 +26,10 @@ jobs:
           condarc: |
             channels:
               - conda-forge
-      # get the data
-      - name: get input data
-        run: |
-          wget https://raw.githubusercontent.com/qgis/QGIS-Training-Data/master/exercise_data/raster/SRTM/srtm_41_19.tif
       # Build the book
       - name: Build the jupyter book
         run: |
+          wget https://raw.githubusercontent.com/qgis/QGIS-Training-Data/master/exercise_data/raster/SRTM/srtm_41_19.tif
           jupyter-book build notebooks
       # Deploy the book's HTML to gh-pages branch
       - name: Deploy to GitHub Pages
