@@ -1,0 +1,17 @@
+name: jupytergis-examples
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.11
+  - numpy
+  - matplotlib
+  - xarray
+  - rioxarray
+  - h5netcdf
+  - netcdf4
+  - pystac
+  - pip
+  - pip:
+    - jupyter-book
+    - sphinx-exercise
